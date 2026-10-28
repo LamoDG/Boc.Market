@@ -35,7 +35,8 @@ Creada por el grupo BOC. Cada banda instala la app y crea su propia tienda.
 
 - Alta con foto (cámara o galería), comprimida y guardada en el dispositivo. Una foto por producto.
 - Precio final en euros, impuestos incluidos, sin desglose de IVA.
-- Tallas opcionales elegidas de una lista estándar (XS–XXL) ampliable. Stock por talla, precio único por producto.
+- Al dar de alta se elige si el producto tiene tallas, elegidas de una lista estándar (XS–XXL) ampliable. Con tallas, stock por talla; sin tallas, stock directo en el producto. Precio único por producto.
+- Un producto solo puede pasar de "sin tallas" a "con tallas" (o al revés) si aún no tiene ventas ni movimientos de stock. Si los tiene, se archiva y se crea otro.
 - Variantes solo por talla. Cada color es un producto distinto.
 - Sin categorías. El catálogo se ordena a mano.
 - Un producto con ventas no se borra, se archiva (desaparece de la venta, se mantiene en el historial).
@@ -82,7 +83,9 @@ Creada por el grupo BOC. Cada banda instala la app y crea su propia tienda.
 
 - Parten de una venta existente: desde el historial o escaneando el QR del ticket. Se eligen las líneas devueltas.
 - **Reembolso**: el dinero sale por un método de pago y cuenta en la caja abierta en ese momento.
-- **Cambio**: entra lo devuelto, sale lo nuevo y se cobra o devuelve la diferencia.
+- **Cambio**: entra lo devuelto, sale lo nuevo y se cobra o devuelve la diferencia con un método de pago, que cuenta en la caja abierta. Si la diferencia es 0, no lleva método de pago.
+- Se devuelve lo realmente pagado por cada línea: un descuento sobre el total se reparte entre las líneas al cobrar (2 × 20 € con 10 % sobre el total → se devuelven 18 € por unidad).
+- Un pack se devuelve siempre entero. Para cambiar la talla de un componente se hace un cambio del pack por el mismo pack con otra talla.
 - Lo devuelto vuelve al stock vendible o se marca como defectuoso.
 - Las ventas nunca se borran. Los errores de cobro se corrigen con una devolución.
 
