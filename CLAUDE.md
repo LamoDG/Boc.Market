@@ -4,6 +4,7 @@ App móvil de merch para bandas (stock, venta, ticket QR, caja). 100 % local, si
 
 - Qué construimos y por qué: `docs/PRD.md`. Léelo antes de diseñar o implementar una funcionalidad.
 - Vocabulario del dominio: `GLOSSARY.md`. Decisiones de arquitectura: `docs/adr/`.
+- Cómo trabajar con Expo (docs versionadas, comandos, routing): @AGENTS.md
 
 ## Idioma
 
@@ -27,7 +28,7 @@ La lógica de negocio (cesta, descuentos, packs, arqueo, devoluciones, codificac
 
 ## Definición de terminado
 
-Una tarea está terminada cuando typecheck, lint y tests están en verde. La lógica de negocio se construye con `/tdd`.
+Una tarea está terminada cuando `npm run check` (typecheck, lint y tests) está en verde. La lógica de negocio se construye con `/tdd`.
 
 ## Flujo
 
